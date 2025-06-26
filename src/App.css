@@ -1,0 +1,222 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Header/Navbar */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+/* Main Container */
+.bottom1-container,
+.bottom2-container {
+  margin-top: 10px;
+}
+
+.bottom1-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.bottom2-container {
+  padding: 2rem;
+}
+
+/* Heading & Photo Sections */
+.heading-container,
+.heading-photo {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.heading-container h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  background: linear-gradient(90deg, #32F6F6 0%, #A6A79F 100%);
+  border-radius: 10px 30px 10px 10px;
+  padding: 5px;
+  width: fit-content;
+  color: white;
+}
+
+.heading-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.heading-container button {
+  margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-button {
+  background: linear-gradient(to right, #DF580C, #FD993D);
+  color: white;
+}
+
+.get-button {
+  max-width: 300px;
+  background: linear-gradient(90deg, #434343 0%, #817E7E 100%);
+  border-radius: 50px 50px 50px 0px;
+  box-shadow: 0px 15px 50px rgba(153, 153, 153, 0.25);
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+/* Image Section */
+.heading-photo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.heading-photo img.image {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Social Icons & Email */
+.icon-mail-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.icon-mail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.icon-mail .rotated-email {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.9rem;
+  color: #555;
+  margin-right: 1rem;
+  pointer-events: auto;
+}
+
+.icon-mail > * {
+  pointer-events: auto;
+}
+
+/* Rotated Email */
+.rotated-email {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+/* Theme Toggle Button Icon */
+.button svg {
+  vertical-align: middle;
+}
+
+/* Logo */
+.logo-icon {
+  margin-right: 15px;
+}
+
+/* Heading Name Color (Custom Control for Dark/Light Modes) */
+.heading-name {
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .heading-name {
+  color: #ffffff;
+}
+
+body.light-mode .heading-name {
+  color: #000000;
+}
+
+/* Social Icons Theme Filter */
+.social-icons img {
+  transition: filter 0.3s ease;
+}
+
+body.light-mode .social-icons img {
+  filter: none;
+}
+
+body.dark-mode .social-icons img {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bottom1-container {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .heading-container,
+  .heading-photo {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading-photo img.image {
+    width: 60%;
+    margin-top: 1rem;
+  }
+
+  .heading-container h1 {
+    font-size: 2.2rem;
+  }
+}
