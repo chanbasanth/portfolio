@@ -4,6 +4,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+.app-container{
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  width:100vw;
+}
+
+.name{
+  font-family:roboto;
+  font-style:caveat;
+  font-size:25px;
+  font-weight:bold;
+}
+
+.skill-container{
+display: flex;
+flex-direction: column;
+align-items: center;  
+justify-content: center; 
+text-align: center;
+padding: 20px;
+}
+
+.ico-mail-container{
+  margin-top:10px;
+}
 
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -46,28 +72,34 @@ body.dark-mode header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 85vh;
   padding: 2rem;
-  gap: 2rem;
+  gap: 3rem;
+  width:80vw;
 }
 
 .bottom2-container {
   padding: 2rem;
+  width:80vw;
 }
 
 /* Heading & Photo Sections */
 .heading-container,
 .heading-photo {
   flex: 1;
-  height: 100%;
+  width : 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+    width: 80vw;
+}
 .heading-container h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  font-style: italic;
   font-size: 30px;
   background: linear-gradient(90deg, #32F6F6 0%, #A6A79F 100%);
   border-radius: 10px 30px 10px 10px;
@@ -90,6 +122,7 @@ body.dark-mode header {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-width:140px;
 }
 
 .download-button {
@@ -125,50 +158,6 @@ body.dark-mode header {
   object-fit: cover;
 }
 
-/* Social Icons & Email */
-.icon-mail-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-}
-
-.icon-mail {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 1rem;
-}
-
-.icon-mail .rotated-email {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: 0.9rem;
-  color: #555;
-  margin-right: 1rem;
-  pointer-events: auto;
-}
-
-.icon-mail > * {
-  pointer-events: auto;
-}
-
-/* Rotated Email */
-.rotated-email {
-  display: inline-block;
-  transform: rotate(90deg);
-}
-
-/* Theme Toggle Button Icon */
-.button svg {
-  vertical-align: middle;
-}
-
-/* Logo */
-.logo-icon {
-  margin-right: 15px;
-}
 
 /* Heading Name Color (Custom Control for Dark/Light Modes) */
 .heading-name {
